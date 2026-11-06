@@ -1,0 +1,18 @@
+/* Functional states only. Original source styles remain in index.html and _ds/. */
+[hidden]{display:none!important}
+header nav a:hover{color:#9E1B1F}
+header nav a[href="#quote"]:hover,
+#top a[href="#quote"]:hover,
+#calc a[href="#quote"]:hover{background:#7E1418;color:#fff}
+#top a[href="#pigs"]:hover,
+#calc button[aria-label="Decrease by 50 tons"]:hover,
+#calc button[aria-label="Increase by 50 tons"]:hover,
+#specs a[href="#quote"]:hover{background:#1A1A1A;color:#f2f2f3}
+#industries div[style*="min-height: 200px"]:hover{background:#fff}
+#partners a[href="#quote"]:hover{color:#1A1A1A;border-color:#1A1A1A}
+#quote a[href^="tel:"]:hover,
+#quote a[href^="mailto:"]:hover{color:#ff5a62}
+#quote-submit:hover{background:#d1161f}
+#quote-submit:active{transform:translateY(1px);background:#7E1418}
+#quote-submit:disabled{cursor:wait;opacity:.65}
+#send-another:hover{background:#f2f2f3;color:#1A1A1A}

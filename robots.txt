@@ -1,4 +1,4 @@
-# Gallegos Trailer Sales — all crawlers welcome
+# AlphaPigs — all crawlers welcome
 User-agent: *
 Allow: /
 
@@ -41,13 +41,4 @@ Allow: /
 User-agent: Amazonbot
 Allow: /
 
-User-agent: DuckAssistBot
-Allow: /
-
-User-agent: cohere-ai
-Allow: /
-
-User-agent: YouBot
-Allow: /
-
-Sitemap: https://gallegossales.com/sitemap.xml
+Sitemap: https://alphapigs.com/sitemap.xml
