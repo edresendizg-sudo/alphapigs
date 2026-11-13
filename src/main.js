@@ -211,12 +211,9 @@ quoteForm.addEventListener('submit', async (event) => {
   try {
     const response = await fetch(quoteForm.action, {
       method: 'POST',
-      body: new FormData(quoteForm),
-      headers: { Accept: 'application/json' }
+      body: new FormData(quoteForm)
     });
-    const result = await response.json();
-    const succeeded = response.ok && (result.success === true || result.success === 'true');
-    if (!succeeded) throw new Error('Quote service rejected the request');
+    if (!response.ok) throw new Error('Quote service rejected the request');
 
     const name = quoteForm.elements.name.value.trim();
     const firstName = name.split(/\s+/)[0];
