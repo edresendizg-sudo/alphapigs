@@ -52,6 +52,6 @@ At your domain registrar's DNS for alphapigs.com:
   gets indexed and linked.
 
 ## 6) Content to finalize
-- [ ] **Phone number** — the quote section shows a placeholder `[(000) 000-0000]`.
-      Send me the real number and I'll set it (and add `tel:` + schema).
+- [x] **Phone number** — set to (956) 606-3296 (Twilio, forwards to a cell),
+      with a `tel:` link, JSON-LD `telephone` and llms.txt.
 - [ ] Confirm the hero/product photos are the final ones you want public.
