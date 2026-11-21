@@ -27,6 +27,16 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://alphapigs.com/#website",
+      "url": "https://alphapigs.com/",
+      "name": "AlphaPigs",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://alphapigs.com/#org"
+      }
+    },
+    {
       "@type": "Organization",
       "@id": "https://alphapigs.com/#org",
       "name": "AlphaPigs",
@@ -35,29 +45,137 @@
       "email": "sales@alphapigs.com",
       "telephone": "+1-956-255-7275",
       "description": "Manufacturer of 4,100 ft³ portable horizontal storage pigs (silos) for cement, catalyst and dry bulk powders. Sold factory-direct to end users, distributors and rental & leasing companies.",
-      "sameAs": []
+      "sameAs": [],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "sales",
+          "telephone": "+1-956-255-7275",
+          "email": "sales@alphapigs.com",
+          "areaServed": "US",
+          "availableLanguage": [
+            "English",
+            "Spanish"
+          ]
+        }
+      ]
     },
     {
       "@type": "Product",
       "name": "AlphaPig — Horizontal Storage Silo (AP-4100)",
-      "brand": { "@type": "Brand", "name": "AlphaPigs" },
+      "brand": {
+        "@type": "Brand",
+        "name": "AlphaPigs"
+      },
       "image": "https://alphapigs.com/uploads/AlphaPigs-v2.jpg",
       "description": "4,100 cubic-foot portable horizontal storage pig (silo) in heavy-gauge high-tensile steel, with engineered hopper fluidization and high-capacity pneumatic transfer. For cement, fly ash, slag, lime, bentonite, barite, catalysts and mineral & chemical powders.",
       "category": "Portable dry bulk storage silo",
       "url": "https://alphapigs.com/",
       "additionalProperty": [
-        { "@type": "PropertyValue", "name": "Capacity", "value": "4,100 ft³" },
-        { "@type": "PropertyValue", "name": "Configuration", "value": "Horizontal, towable" }
+        {
+          "@type": "PropertyValue",
+          "name": "Capacity",
+          "value": "4,100 ft³"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Configuration",
+          "value": "Horizontal, towable"
+        }
       ],
       "offers": {
         "@type": "AggregateOffer",
         "availability": "https://schema.org/InStock",
         "priceCurrency": "USD",
-        "seller": { "@id": "https://alphapigs.com/#org" },
+        "seller": {
+          "@id": "https://alphapigs.com/#org"
+        },
         "businessFunction": [
           "http://purl.org/goodrelations/v1#Sell"
         ]
+      },
+      "sku": "AP-4100",
+      "manufacturer": {
+        "@id": "https://alphapigs.com/#org"
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://alphapigs.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an AlphaPig?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An AlphaPig is a portable horizontal storage silo, or \"pig\", that holds 4,100 cubic feet of cement or other dry bulk powder on a job site. It is built from heavy-gauge, high-tensile steel, with an engineered hopper aeration system for flow and a high-capacity pneumatic manifold for loading and discharge. Its low profile suits sites where overhead clearance is restricted."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What materials can an AlphaPig store?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Portland cement, fly ash, slag, lime, bentonite, barite, catalysts, and mineral and chemical powders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many storage pigs does my job need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the pig calculator on this page: choose the material, enter the tons on the job, and it estimates how many pigs you need and the total storage. The result is a preliminary estimate. Our team confirms the final sizing with your quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can an AlphaPig be moved while it is full?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. The pig is not designed to transport material. It may only be moved empty, escorted by a trailing vehicle."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you deliver to the job site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. AlphaPigs are delivered to your site, towed or trucked in and set on a level pad. Include the job location in your quote request."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you sell, rent or lease AlphaPigs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AlphaPigs sells only, factory-direct. We sell to end users, distributors, and rental and leasing companies that rent pigs out to their own customers. AlphaPigs does not rent or lease units itself."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does an AlphaPig cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We quote each order. Send your job details through the quote form or email sales@alphapigs.com, and a real person answers within one business day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I order custom paint or our company logo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can request custom paint and your company logo on the quote form, and our team confirms the options with your quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which industries use AlphaPigs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Construction, ready-mix and concrete, oil and gas, refining and petrochemical, soil stabilization, mining, power and utilities, and chemical and industrial operations."
+          }
+        }
+      ]
     }
   ]
 }
@@ -160,7 +278,7 @@ a:hover{color:#1A1A1A}
 </div>
 </div>
 <div class="blueprint" data-dc-tpl="88" style="position: relative; aspect-ratio: 2048 / 1638; width: 100%; align-self: center; border: 1px solid rgb(26, 26, 26); background: rgb(242, 242, 243);">
-<img alt="AlphaPigs horizontal storage pig in sand color, set up at an aggregate plant" data-dc-tpl="89" src="uploads/AlphaPigs-v2.jpg" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: contain; display: block;"/>
+<img alt="AlphaPigs horizontal storage pig in sand color, set up at an aggregate plant" data-dc-tpl="89" src="uploads/AlphaPigs-v2.webp" width="1600" height="1280" fetchpriority="high" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: contain; display: block;"/>
 <i class="corner tl" data-dc-tpl="90"></i><i class="corner tr" data-dc-tpl="91"></i><i class="corner bl" data-dc-tpl="92"></i><i class="corner br" data-dc-tpl="93"></i>
 </div>
 </div>
@@ -181,7 +299,7 @@ a:hover{color:#1A1A1A}
 </div>
 <div data-dc-tpl="113">
 <article class="blueprint" data-dc-tpl="114" style="background: rgba(242, 242, 243, 0.86); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));">
-<div data-dc-tpl="115" style="position: relative; aspect-ratio: 16 / 9; align-self: center; filter: grayscale(1); border-right: 1px solid rgba(26, 26, 26, 0.16);"><div style="position:absolute;inset:0;overflow:hidden;background:rgba(127,127,127,.08)"><img alt="Horizontal AlphaPigs storage pig" draggable="false" src="uploads/ap-horizontal.webp" style="display:block;position:absolute;max-width:none;width:100%;height:141.976%;left:50%;top:50%;transform:translate(-50%,-50%)"/></div></div>
+<div data-dc-tpl="115" style="position: relative; aspect-ratio: 16 / 9; align-self: center; filter: grayscale(1); border-right: 1px solid rgba(26, 26, 26, 0.16);"><div style="position:absolute;inset:0;overflow:hidden;background:rgba(127,127,127,.08)"><img alt="Horizontal AlphaPigs storage pig" draggable="false" src="uploads/ap-horizontal.webp" width="1106" height="885" loading="lazy" decoding="async" style="display:block;position:absolute;max-width:none;width:100%;height:141.976%;left:50%;top:50%;transform:translate(-50%,-50%)"/></div></div>
 <div data-dc-tpl="117" style="padding: clamp(22px, 3vw, 36px); display: flex; flex-direction: column; gap: 14px;">
 <div data-dc-tpl="118" style='display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 13px; letter-spacing: 0.2em; color: rgb(93, 93, 96);'><span data-dc-tpl="119">FIG.01</span><span data-dc-tpl="120" style="color: rgb(158, 27, 31);">TOWABLE</span></div>
 <h3 data-dc-tpl="121" style='margin: 0px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 40px; line-height: 1; text-transform: uppercase;'>Horizontal Storage Silo (The "AlphaPig")</h3>
@@ -339,11 +457,28 @@ a:hover{color:#1A1A1A}
 </div>
 </div>
 </section>
+<section data-screen-label="FAQ" id="faq" style="max-width: 1280px; margin: 0px auto; padding: clamp(64px, 8vw, 110px) clamp(20px, 5vw, 72px);">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px; margin-bottom: 32px;">
+<span style='font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.22em; color: rgb(158, 27, 31);'>07 — FAQ</span>
+<h2 style='margin: 0px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(38px, 4.6vw, 64px); line-height: 0.95; text-transform: uppercase; text-wrap: balance;'>Questions buyers ask.</h2>
+</div>
+<div style="border-bottom: 1px solid rgba(26, 26, 26, 0.2);">
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>What is an AlphaPig?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">An AlphaPig is a portable horizontal storage silo, or &quot;pig&quot;, that holds 4,100 cubic feet of cement or other dry bulk powder on a job site. It is built from heavy-gauge, high-tensile steel, with an engineered hopper aeration system for flow and a high-capacity pneumatic manifold for loading and discharge. Its low profile suits sites where overhead clearance is restricted.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>What materials can an AlphaPig store?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">Portland cement, fly ash, slag, lime, bentonite, barite, catalysts, and mineral and chemical powders.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>How many storage pigs does my job need?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">Use the pig calculator on this page: choose the material, enter the tons on the job, and it estimates how many pigs you need and the total storage. The result is a preliminary estimate. Our team confirms the final sizing with your quote.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>Can an AlphaPig be moved while it is full?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">No. The pig is not designed to transport material. It may only be moved empty, escorted by a trailing vehicle.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>Do you deliver to the job site?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">Yes. AlphaPigs are delivered to your site, towed or trucked in and set on a level pad. Include the job location in your quote request.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>Do you sell, rent or lease AlphaPigs?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">AlphaPigs sells only, factory-direct. We sell to end users, distributors, and rental and leasing companies that rent pigs out to their own customers. AlphaPigs does not rent or lease units itself.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>How much does an AlphaPig cost?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">We quote each order. Send your job details through the quote form or email sales@alphapigs.com, and a real person answers within one business day.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>Can I order custom paint or our company logo?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">Yes. You can request custom paint and your company logo on the quote form, and our team confirms the options with your quote.</p></details>
+<details style="border-top: 1px solid rgba(26, 26, 26, 0.2); padding: 18px 0;"><summary style='cursor: pointer; list-style-position: inside; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(20px, 2.2vw, 26px); letter-spacing: 0.02em; text-transform: uppercase; line-height: 1.15;'>Which industries use AlphaPigs?</summary><p style="margin: 12px 0 0; max-width: 760px; color: rgb(58, 58, 61); line-height: 1.6;">Construction, ready-mix and concrete, oil and gas, refining and petrochemical, soil stabilization, mining, power and utilities, and chemical and industrial operations.</p></details>
+</div>
+</section>
 <section data-dc-tpl="324" data-screen-label="Quote" id="quote" style="background: rgb(26, 26, 26); color: rgb(242, 242, 243); position: relative; overflow: hidden;">
 <div aria-hidden="true" data-dc-tpl="325" style='position: absolute; right: -2vw; top: -4vw; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: clamp(180px, 26vw, 420px); line-height: 0.8; color: transparent; -webkit-text-stroke: 1px rgba(242, 242, 243, 0.14); pointer-events: none;'>PIGS</div>
 <div data-dc-tpl="326" style="position: relative; max-width: 1280px; margin: 0px auto; padding: clamp(64px, 8vw, 110px) clamp(20px, 5vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(32px, 5vw, 72px);">
 <div data-dc-tpl="327" style="display: flex; flex-direction: column; gap: 16px;">
-<span data-dc-tpl="328" style='font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.22em; color: rgb(255, 90, 98);'>07 — GET A QUOTE</span>
+<span data-dc-tpl="328" style='font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 15px; letter-spacing: 0.22em; color: rgb(255, 90, 98);'>08 — GET A QUOTE</span>
 <h2 data-dc-tpl="329" style='margin: 0px; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: clamp(40px, 5vw, 72px); line-height: 0.92; text-transform: uppercase; text-wrap: balance;'>Tell us the job. We'll price the pig.</h2>
 <p data-dc-tpl="330" style="margin: 0px; color: rgb(201, 201, 204); font-size: 17px; line-height: 1.55; max-width: 440px;">One pig for your job site or a full fleet for your rental business. A real person answers within one business day.</p>
 <div data-dc-tpl="331" style='margin-top: 18px; display: flex; flex-direction: column; gap: 6px; font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 0.04em;'>
