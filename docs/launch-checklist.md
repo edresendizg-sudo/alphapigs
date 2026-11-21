@@ -52,6 +52,6 @@ At your domain registrar's DNS for alphapigs.com:
   gets indexed and linked.
 
 ## 6) Content to finalize
-- [x] **Phone number** — set to (956) 606-3296 (Twilio, forwards to a cell),
+- [x] **Phone number** — set to (956) 255-7275 for now (direct cell; Twilio (956) 606-3296 pending),
       with a `tel:` link, JSON-LD `telephone` and llms.txt.
 - [ ] Confirm the hero/product photos are the final ones you want public.
