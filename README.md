@@ -1,7 +1,8 @@
 # AlphaPigs — alphapigs.com
 
 Marketing site for **AlphaPigs**, maker of 4,100 ft³ portable horizontal storage
-pigs (silos) for cement, catalyst and dry bulk powders. Buy, lease or rent.
+pigs (silos) for cement, catalyst and dry bulk powders. Sold factory-direct to
+end users, distributors and rental & leasing companies.
 
 Single-page static site (no build step). Hosted on **GitHub Pages** with the
 custom domain **alphapigs.com**.
