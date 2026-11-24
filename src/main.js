@@ -39,7 +39,12 @@ motionPreference.addEventListener('change', requestMotionUpdate);
 updateMotion();
 
 // Calculator — original materials, defaults, calculations and output formatting.
-const MATERIALS = [['Cement', 94], ['Fly ash', 65], ['Lime', 60], ['Catalyst', 50], ['Barite', 130]];
+// Bulk densities (lb/ft³). Order matches the data-material-index buttons in index.html.
+const MATERIALS = [['Cement', 94], ['Fly ash', 65], ['Lime', 60], ['Catalyst', 50], ['Barite', 130], ['Slag', 75], ['Bentonite', 55]];
+// Owner rules (2026-11-24): fill 90–95% of the 4,100 ft³, never more than 190 tons per pig.
+const FILL_LOW = 0.90;
+const FILL_HIGH = 0.95;
+const MAX_TONS_PER_PIG = 190;
 const materialButtons = [...document.querySelectorAll('#calc [data-material-index]')];
 const tonsInput = document.querySelector('#calc-tons');
 const tonsRange = document.querySelector('#calc-tons-range');
@@ -48,9 +53,11 @@ let tons = 600;
 
 function renderCalculator() {
   const [materialName, density] = MATERIALS[materialIndex];
-  const volumetricPerPig = 4100 * density / 2000;
-  const perPig = materialName === 'Cement' ? 190 : Math.min(volumetricPerPig, 220);
-  const pigs = Math.max(1, Math.ceil(tons / perPig));
+  const fullVolumeTons = 4100 * density / 2000;
+  const perPigLow = Math.min(fullVolumeTons * FILL_LOW, MAX_TONS_PER_PIG);
+  const perPigHigh = Math.min(fullVolumeTons * FILL_HIGH, MAX_TONS_PER_PIG);
+  // Size on the low end so the job is never short of storage.
+  const pigs = Math.max(1, Math.ceil(tons / perPigLow));
   const pigsWord = pigs === 1 ? 'pig' : 'pigs';
 
   materialButtons.forEach((button, index) => {
@@ -63,7 +70,13 @@ function renderCalculator() {
   tonsRange.value = tons;
   document.querySelector('#calc-pig-count').textContent = pigs;
   document.querySelector('#calc-pig-word').textContent = pigsWord;
-  document.querySelector('#calc-per-pig').textContent = `${Math.round(perPig)} tons ${materialName.toLowerCase()}`;
+  const low = Math.round(perPigLow);
+  const high = Math.round(perPigHigh);
+  document.querySelector('#calc-per-pig').textContent = low === high
+    ? `up to ${high} tons ${materialName.toLowerCase()} (weight limit)`
+    : `${low}–${high} tons ${materialName.toLowerCase()}`;
+  const bariteNote = document.querySelector('#calc-barite-note');
+  if (bariteNote) bariteNote.hidden = materialName !== 'Barite';
   document.querySelector('#calc-total-ft').textContent = `${(pigs * 4100).toLocaleString('en-US')} ft³`;
   document.querySelector('#calc-quote-cta').textContent = `Quote ${pigs} ${pigsWord} →`;
   requestMotionUpdate();
